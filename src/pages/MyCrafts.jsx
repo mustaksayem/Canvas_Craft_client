@@ -8,6 +8,7 @@ const MyCrafts = () => {
     const { user } = useAuth() || {};
     const [item, setItem] = useState([]);
     const [control, setControl] = useState(false);
+    const [filter, setFilter] = useState("all"); 
     console.log(user);
     useEffect(() => {
       fetch(`http://localhost:5000/myCrafts/${user?.email}`)
@@ -57,10 +58,23 @@ Swal.fire({
   }
 });
     }
+    const handleFilterChange = (e) => {
+      setFilter(e.target.value);
+    };
+  
+    const filteredItems =
+      filter === "all"
+        ? item
+        : item.filter((item) => item.customization === filter);
     return (
         <div>
+          <select value={filter} onChange={handleFilterChange}>
+        <option value='all'>All</option>
+        <option value='yes'>Customized</option>
+        <option value='no'>Non-customized</option>
+      </select>
            {
-        item?.map((p,index) => (
+        filteredItems?.map((p,index) => (
           <div key={index}>
             <h1>{p.rating}</h1>
             <h1>{p.price}</h1>

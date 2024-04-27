@@ -19,8 +19,9 @@ const AddCraftItem = () => {
     const processingTime = form.processingTime.value;
     const email = user.email;
     const userName = user.displayName;
+    const customization = form.customization.value;
 
-    const newCarft = {name,subcataegory,description, price, picture,rating,processingTime,email,userName }
+    const newCarft = {name,subcataegory,description, price, picture,rating,processingTime,email,userName,customization }
     console.log(newCarft);  
 
 fetch('http://localhost:5000/add',{
@@ -89,6 +90,18 @@ fetch('http://localhost:5000/add',{
   
   
 </label>
+
+<label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text">Customization</span>
+
+  </div>
+  <input type="text" name="customization"  placeholder="Customization" className="input input-bordered w-full max-w-xs" />
+  
+  
+</label>
+
+
 <label className="form-control w-full max-w-xs">
   <div className="label">
     <span className="label-text">Picture</span>
