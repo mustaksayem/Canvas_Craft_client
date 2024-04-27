@@ -4,10 +4,12 @@ import Error from "../pages/Error";
 import Home from "../pages/Home";
 import AllCrafts from "../pages/AllCrafts";
 import AddCraftItem from "../pages/AddCraftItem";
-import MyArtCraftList from "../pages/MyArtCraftList";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import ProtectedRoute from "../utilitis/ProtectedRoute";
+import MyCrafts from "../pages/MyCrafts";
+import CraftsDetails from "../pages/CraftsDetails";
+import Update from "../pages/Update";
 
 export const router = createBrowserRouter([
     {
@@ -32,14 +34,33 @@ export const router = createBrowserRouter([
             element:<ProtectedRoute>
 <AddCraftItem></AddCraftItem>
             </ProtectedRoute>
-             ,
+             
+           
+          },
+          
+          {
+            path: "/mycrafts",
+            element:<ProtectedRoute>
+            <MyCrafts></MyCrafts>
+            </ProtectedRoute>
+             
            
           },
           {
-            path: "/myartcraftlist",
-            element:<MyArtCraftList></MyArtCraftList> ,
+            path: "/carftsDetails/:id",
+            element:
+            <CraftsDetails></CraftsDetails>
            
           },
+          {
+            path: "/update/:id",
+            element:
+            <ProtectedRoute>
+           <Update></Update>
+            </ProtectedRoute>
+           
+          },
+          
           {
             path: "/login",
             element:<LoginPage></LoginPage> ,

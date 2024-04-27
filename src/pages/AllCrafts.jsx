@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const AllCrafts = () => {
@@ -19,7 +19,7 @@ const carfts = useLoaderData();
                 <td className='border px-4 py-2'>{craft.name}</td>
                 <td className='border px-4 py-2'>{craft.rating}</td>
                 <td className='border px-4 py-2'>
-                  <button>View Details</button>
+                  <Link to={`/carftsDetails/${craft._id}`}><button>View Details</button></Link>
                 </td>
               </tr>
             ))}

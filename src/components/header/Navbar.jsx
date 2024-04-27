@@ -64,6 +64,19 @@ const Navbar = ({ setDarkMode, darkMode }) => {
               </NavLink>
             </li>
             <li>
+            <NavLink
+                to="/mycrafts"
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? "pending"
+                    : isActive
+                    ? "text-[#FF497C] border-b-4 border-[#FF497C]"
+                    : "hover:text-[#FF497C]"
+                }
+              >
+                <span>My Art and Crafts</span>
+              </NavLink>
+            </li>
               {/* <NavLink
                 to="/myCart"
                 className={({ isActive, isPending }) =>
@@ -77,7 +90,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
                 <span>My Cart</span>
               </NavLink> */}
               <Link to="/allcrafts">ALl Product</Link>
-            </li>
+            
           </ul>
         </nav>
 

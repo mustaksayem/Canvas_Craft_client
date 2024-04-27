@@ -1,6 +1,9 @@
 import Swal from 'sweetalert2'
+import useAuth from '../hooks/useAuth';
 
 const AddCraftItem = () => {
+
+  const { user } = useAuth() || {};
    const handleAddCarft = event =>{
     event.preventDefault();
 
@@ -14,8 +17,10 @@ const AddCraftItem = () => {
     const picture = form.picture.value;
     const rating = form.rating.value;
     const processingTime = form.processingTime.value;
+    const email = user.email;
+    const userName = user.displayName;
 
-    const newCarft = {name,subcataegory,description, price, picture,rating,processingTime }
+    const newCarft = {name,subcataegory,description, price, picture,rating,processingTime,email,userName }
     console.log(newCarft);  
 
 fetch('http://localhost:5000/add',{
@@ -33,7 +38,7 @@ fetch('http://localhost:5000/add',{
             title: 'Success!',
             text: 'Carft Added Sucessfully',
             icon: 'success',
-            confirmButtonText: 'Okaynp!'
+            confirmButtonText: 'Okay!'
           })
     }
 })

@@ -69,54 +69,70 @@ const LoginPage = () => {
   return (
     <div className="gadgetContainer">
       {loading && <Spinner />}
-      <div className="flex md:justify-between items-center justify-center flex-wrap gap-4">
-        <img className="h-[100px]" src={logo} alt="" />
-        <div>
-          Not a member?
-          <Link
-            className="px-3 ml-3 py-2 bg-[#FF497C] hover:bg-[#ab3154] rounded text-white font-semibold"
-            to="/signUp"
-          >
-            Sign Up
-          </Link>
-        </div>
-      </div>
+      
 
-      <p
+      {/* <p
         onClick={() => navigate("/")}
         className="text-lg font-semibold text-[#FF497C] my-3 cursor-pointer hover:bg-[#FF497C] inline-block rounded py-1 px-2 hover:text-white duration-200"
       >
         <i className="bx bx-left-arrow-alt"></i> <span>Back Home</span>
-      </p>
+      </p> */}
 
       <div className="border shadow-lg mt-10">
         <div className="w-full  flex">
-          <div
-            className="w-full  bg-gray-400 hidden lg:block  bg-no-repeat  lg:w-1/2  rounded-l-lg "
-            style={{
-              background: `url(${signIn})`,
-              backgroundSize: "100% 100%",
-              backgroundOrigin: "content-box",
-            }}
-          >
-            <p className="font-bold text-3xl mt-20 mx-6">
-              We Offer the <br />
-              Best Products
-            </p>
-          </div>
+       
 
           <div className="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
             <div className=" p-5 ">
               <div className="pb-8">
                 <p className="text-3xl font-bold mb-2">
-                  Sign in to GigaGadgets.
+                Sign in with your organizational id number.
                 </p>
 
-                <p className="font-semibold text-black/60">
-                  Enter your details below
-                </p>
               </div>
 
+              
+
+              <div className="my-5 border-b text-center">
+                <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium  transform translate-y-3/4">
+                  Or sign In with e-mail
+                </div>
+              </div>
+
+              <form onSubmit={handleLogin} className="space-y-3 w-full ">
+                <div>
+                  <fieldset className="border border-solid border-gray-300 p-3 w-full rounded">
+                    <legend className=" font-medium text-black/60">
+                      Email
+                    </legend>
+                    <input
+                      type="email"
+                      name="email"
+                      id=""
+                      placeholder="Email"
+                      className="px-4 py-1 w-full focus:outline-0"
+                    />
+                  </fieldset>
+                </div>
+                <div>
+                  <fieldset className="border border-solid border-gray-300 p-3 w-full rounded">
+                    <legend className=" font-medium text-black/60">
+                      Password
+                    </legend>
+                    <input
+                      type="password"
+                      name="password"
+                      id=""
+                      placeholder="password"
+                      className="px-4 py-1 w-full focus:outline-0"
+                    />
+                  </fieldset>
+                </div>
+
+                <button className="px-3 py-2 bg-[#FF497C] hover:bg-[#ab3154] rounded text-white font-semibold">
+                  Sign In
+                </button>
+              </form>
               <div className="flex items-center flex-wrap md:flex-nowrap gap-4 mb-4">
                 <button
                   onClick={() => handleGoogleSignIn()}
@@ -160,47 +176,6 @@ const LoginPage = () => {
                   <span className="ml-4">Sign In with GitHub</span>
                 </button>
               </div>
-
-              <div className="my-5 border-b text-center">
-                <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium  transform translate-y-3/4">
-                  Or sign In with e-mail
-                </div>
-              </div>
-
-              <form onSubmit={handleLogin} className="space-y-3 w-full ">
-                <div>
-                  <fieldset className="border border-solid border-gray-300 p-3 w-full rounded">
-                    <legend className=" font-medium text-black/60">
-                      Email
-                    </legend>
-                    <input
-                      type="email"
-                      name="email"
-                      id=""
-                      placeholder="Email"
-                      className="px-4 py-1 w-full focus:outline-0"
-                    />
-                  </fieldset>
-                </div>
-                <div>
-                  <fieldset className="border border-solid border-gray-300 p-3 w-full rounded">
-                    <legend className=" font-medium text-black/60">
-                      Password
-                    </legend>
-                    <input
-                      type="password"
-                      name="password"
-                      id=""
-                      placeholder="password"
-                      className="px-4 py-1 w-full focus:outline-0"
-                    />
-                  </fieldset>
-                </div>
-
-                <button className="px-3 py-2 bg-[#FF497C] hover:bg-[#ab3154] rounded text-white font-semibold">
-                  Sign In
-                </button>
-              </form>
             </div>
           </div>
         </div>
@@ -210,6 +185,17 @@ const LoginPage = () => {
             duration: 3000,
           }}
         />
+        <div className="flex md:justify-between items-center justify-center flex-wrap gap-4">
+       
+       <div>
+         <Link
+           className="px-3 ml-3 py-2 bg-[#FF497C] hover:bg-[#ab3154] rounded text-white font-semibold"
+           to="/registration"
+         >
+           Sign Up
+         </Link>
+       </div>
+     </div>
       
     </div>
   );

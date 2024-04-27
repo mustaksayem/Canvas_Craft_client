@@ -59,23 +59,20 @@ const RegisterPage = () => {
     const password = form?.password.value;
     console.log("ashufakshjf", name, imageURL, email, password);
 
-    // Password Validation
-    // if (
-    //   !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(
-    //     password
-    //   )
-    // ) {
-    
-    //   toast.error(
-    //     "password must be have at least 6 characters,a capital & spacial letter,one number"
-    //   )
-    //   return;
-    // }
-    // // Email Validation
-    // if (!/^\w+([.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-    //   toast.error("Please enter a valid email");
-    //   return;
-    // }
+  
+    if (password.length < 6) {
+      toast.error("Password less than 6 character");
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      toast.error("Password must contain at least one uppercase letter");
+      return false;
+    }
+
+    if (!/[a-z]/.test(password)) {
+      toast.error("Password must contain at least one lowercase letter");
+      return false;
+    }
 
     console.log("after");
     //create user
