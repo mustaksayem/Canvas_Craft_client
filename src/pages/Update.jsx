@@ -1,26 +1,56 @@
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+
+
 const Update = () => {
+
+    const {id} = useParams();
+    console.log(id);
+    const [craft,setCrafts] =useState({});
+    useEffect(() => {
+     fetch(`http://localhost:5000/carftsDetails/${id}`)
+         .then(res => res.json())
+         .then((data) => {
+          setCrafts(data);
+     })
+ },[id])
+ const handleUpdate = (e) => {
+    e.preventDefault();
+    const price = e.target.price.value;
+    const rating = e.target.rating.value;
+    const info = { price, rating };
+    console.log(info);
+       fetch(`http://localhost:5000/update/${id}`, {
+         method: "PUT",
+         headers: { "Content-type": "application/json" },
+         body: JSON.stringify(info),
+       });
+  };
     return (
         <div>
-            
+            <h1>{craft.price}</h1>
+            <form onSubmit={handleUpdate}>
+            <label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text">Name</span>
 
-<htmlForm className="max-w-sm mx-auto">
-  <div className="mb-5">
-    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-    <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
   </div>
-  <div className="mb-5">
-    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-    <input type="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-  </div>
-  <div className="flex items-start mb-5">
-    <div className="flex items-center h-5">
-      <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
-    </div>
-    <label htmlFor="remember" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
-  </div>
-  <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-</htmlForm>
+  <input type="text" defaultValue={craft.rating} name="rating" placeholder="Name"  className="input input-bordered w-full max-w-xs" />
+  
+</label>
 
+<label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text">Sub-cataegory</span>
+
+  </div>
+  <input type="text" defaultValue={craft.price} name="price" placeholder="Sub-cataegory" className="input input-bordered w-full max-w-xs" />
+
+  
+</label>
+
+<input type="submit" value="Update" className="btn btn-block" />
+</form>
         </div>
     );
 };

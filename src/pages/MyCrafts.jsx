@@ -62,10 +62,10 @@ Swal.fire({
            {
         item?.map((p,index) => (
           <div key={index}>
-            <h1>{p.email}</h1>
+            <h1>{p.rating}</h1>
             <h1>{p.price}</h1>
-            <h1>{p._id}</h1>
-            <Link to='/update/${id}'><button className="btn btn-primary">Update</button></Link>
+           
+            <Link to={`/update/${p._id}`}><button className="btn btn-primary">Update</button></Link>
            <button onClick={() => handleDelete(p._id)}  className="btn btn-warning">Delete</button>
           </div>
         ))
