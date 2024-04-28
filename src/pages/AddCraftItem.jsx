@@ -50,7 +50,7 @@ fetch('http://localhost:5000/add',{
 
 
     return (
-        <div className='text-gray-200 dark:text-white'>
+        <div>
             {/* Add Craft Item
 
           
@@ -163,20 +163,20 @@ fetch('http://localhost:5000/add',{
             <input type="text" name='processing_time' className="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"  placeholder="Processing Time"/>
             </div>
             <div className='flex flex-row gap-1  items-center border-b border-sky-400 mb-6'>
-          <label className='font-semibold'>
+          <label className='font-semibold text-gray-500'>
             Customization <span className='text-red-500'></span>
           </label>
          
-          <label>
+          <label className='text-gray-500'>
             <input
               type='radio'
               value='yes'
-              className='input-radio mx-2'
+              className='input-radio mx-2 '
               name='customization'
             />
             Yes
           </label>
-          <label className="ml-3">
+          <label className="ml-3 text-gray-500">
             <input
               type='radio'
               value='no'
@@ -188,24 +188,24 @@ fetch('http://localhost:5000/add',{
         </div>
 
         <div className='flex flex-row gap-1  items-center border-b border-sky-400 mb-6'>
-          <label className='font-semibold  '>
+          <label className='font-semibold text-gray-500  '>
           Stock Status
           </label>
          
-          <label>
+          <label className='text-gray-500'>
             <input
               type='radio'
               value='stock'
-              className='input-radio mx-2'
+              className='input-radio mx-2 '
               name='stockStatus'
             />
             Stock
           </label>
-          <label className="ml-3">
+          <label className="ml-3 text-gray-500">
             <input
               type='radio'
               value='no'
-              className='input-radio mx-2'
+              className='input-radio mx-2 '
               name='stockStatus'
             />
              Made to Order
@@ -217,7 +217,7 @@ fetch('http://localhost:5000/add',{
             </div>
 
         <div className='flex flex-col gap-1 border-b border-sky-400 mb-6'>
-  <label className='font-semibold'>
+  <label className='font-semibold text-gray-500'>
     Subcategory Name 
   </label>
   <select
