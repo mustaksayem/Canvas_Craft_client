@@ -1,9 +1,16 @@
+import Discount from "../components/body/Discount";
+import LatestProduct from "../components/body/LatestProduct";
+import Slider from "../components/body/Slider";
+
 
 
 const Home = () => {
     return (
         <div>
-            <h1>Home Page</h1>
+            <Slider></Slider>
+            <Discount></Discount>
+            <LatestProduct></LatestProduct>
+           
         </div>
     );
 };

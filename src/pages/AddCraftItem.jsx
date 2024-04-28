@@ -10,18 +10,19 @@ const AddCraftItem = () => {
     const form = event.target;
 
 
-    const name = form.name.value;
-    const subcataegory = form.subcataegory.value;
-    const description = form.description.value;
+    const  item_name = form.item_name.value;
+    const subcategory_Name = form.subcategory_Name.value;
+    const  short_description = form.short_description.value;
     const price = form.price.value;
-    const picture = form.picture.value;
+    const  image = form.image.value;
     const rating = form.rating.value;
-    const processingTime = form.processingTime.value;
+    const processing_time = form.processing_time.value;
     const email = user.email;
     const userName = user.displayName;
     const customization = form.customization.value;
+    const stockStatus= form.stockStatus.value;
 
-    const newCarft = {name,subcataegory,description, price, picture,rating,processingTime,email,userName,customization }
+    const newCarft = {item_name,subcategory_Name,short_description, price, image,rating,processing_time,email,userName,customization,stockStatus }
     console.log(newCarft);  
 
 fetch('http://localhost:5000/add',{
