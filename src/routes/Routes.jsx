@@ -10,6 +10,7 @@ import ProtectedRoute from "../utilitis/ProtectedRoute";
 import MyCrafts from "../pages/MyCrafts";
 import CraftsDetails from "../pages/CraftsDetails";
 import Update from "../pages/Update";
+import ArtCraftSection from "../pages/ArtCraftSection";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
         path: "/allcrafts",
         element: <AllCrafts />,
         loader: () => fetch("http://localhost:5000/add")
+      },
+      {
+        path: "/artCraft/:subcategory_Name",
+        element: <ArtCraftSection></ArtCraftSection>,
       },
       {
         path: "/addcraftitem",

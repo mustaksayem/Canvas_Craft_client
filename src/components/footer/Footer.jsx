@@ -1,14 +1,14 @@
 const Footer = () => {
     return (
         <div>
-       <footer className="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
+       <footer className="bg-gray-500 dark:bg-white">
   <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
       <p className="font-medium text-gray-500">
       CanvasCarftHub
           </p>
-        <p className="max-w-xs mt-4 text-sm text-gray-600">
+        <p className="max-w-xs mt-4 text-sm text-gray-600 dark:text-red-700">
           Touch With Us and Enjoy our Products
         </p>
         <div className="flex mt-8 space-x-6 text-gray-600">
