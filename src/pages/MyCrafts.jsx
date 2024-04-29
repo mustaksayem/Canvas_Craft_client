@@ -68,7 +68,7 @@ Swal.fire({
         ? item
         : item.filter((item) => item.customization === filter);
     return (
-        <div className="">
+        <div className="bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-gray-200">
           <h1 className="text-center text-2xl  bg-slate-400 m-6 rounded-lg p-6 text-[#FFFF] ">See All Your Product</h1>
           <div className="flex justify-center my-6">
   <select

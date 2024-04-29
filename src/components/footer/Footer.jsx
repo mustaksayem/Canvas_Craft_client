@@ -1,17 +1,17 @@
 const Footer = () => {
     return (
-        <div>
-       <footer className="bg-gray-500 dark:bg-white">
+        <div >
+       <footer className="bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-gray-100">
   <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 justify-center items-center p-32 sm:p-0">
       <div>
-      <p className="font-medium text-gray-500">
+      <p className="font-medium text-slate-600 dark:text-gray-100">
       CanvasCarftHub
           </p>
-        <p className="max-w-xs mt-4 text-sm text-gray-600 dark:text-red-700">
+        <p className="max-w-xs mt-4 text-sm text-slate-600 dark:text-gray-100">
           Touch With Us and Enjoy our Products
         </p>
-        <div className="flex mt-8 space-x-6 text-gray-600">
+        <div className="flex mt-8 space-x-6 text-slate-600 dark:text-gray-100">
           <a className="hover:opacity-75" href target="_blank" rel="noreferrer">
             <span className="sr-only"> Facebook </span>
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -44,12 +44,12 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4 text-slate-600 dark:text-gray-100">
         <div>
-          <p className="font-medium text-gray-500">
+          <p className="font-medium text-slate-600 dark:text-gray-100">
             Company
           </p>
-          <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-sm text-slate-600 dark:text-gray-100">
             <a className="hover:opacity-75" href> About </a>
             <a className="hover:opacity-75" href> Meet the Team </a>
             <a className="hover:opacity-75" href> History </a>
@@ -57,10 +57,10 @@ const Footer = () => {
           </nav>
         </div>
         <div>
-          <p className="font-medium text-gray-500">
+          <p className="font-medium text-slate-600 dark:text-gray-100">
             Services
           </p>
-          <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-sm text-slate-600 dark:text-gray-100">
             <a className="hover:opacity-75" href> 1on1 Coaching </a>
             <a className="hover:opacity-75" href> Company Review </a>
             <a className="hover:opacity-75" href> Accounts Review </a>
@@ -69,20 +69,20 @@ const Footer = () => {
           </nav>
         </div>
         <div>
-          <p className="font-medium text-gray-500">
+          <p className="font-medium text-slate-600 dark:text-gray-100">
             Helpful Links
           </p>
-          <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-sm text-slate-600 dark:text-gray-100">
             <a className="hover:opacity-75" href> Contact </a>
             <a className="hover:opacity-75" href> FAQs </a>
             <a className="hover:opacity-75" href> Live Chat </a>
           </nav>
         </div>
         <div>
-          <p className="font-medium text-gray-500">
+          <p className="font-medium text-slate-600 dark:text-gray-100">
             Legal
           </p>
-          <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+          <nav className="flex flex-col mt-4 space-y-2 text-sm text-slate-600 dark:text-gray-100">
             <a className="hover:opacity-75" href> Privacy Policy </a>
             <a className="hover:opacity-75" href> Terms &amp; Conditions </a>
             <a className="hover:opacity-75" href> Returns Policy </a>
@@ -91,7 +91,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    <p className="mt-8 text-xs text-gray-800">
+    <p className=" text-xs text-slate-600 dark:text-gray-100 pl-32 sm:pl-0">
       © CanvasCarftHub
     </p>
   </div>

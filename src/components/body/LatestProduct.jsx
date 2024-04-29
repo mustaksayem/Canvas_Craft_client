@@ -2,9 +2,9 @@
 
 const LatestProduct = () => {
     return (
-        <div className="dark:text-white  mt-4 md:mt-10 lg:mt-16">
-      <h1 className="text-center text-4xl my-4 md:my-10 lg:my-16 ">Find Our Latest Product!!</h1>
-      <hr />
+        <div className="bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-gray-200">
+      <h1 className="text-center text-4xl p-10">Find Our Latest Product!!</h1>
+     
         <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/qkKTH6K/photo-1630609083938-3acb39a06392.jpg)'}}>
 <div className="hero-overlay bg-opacity-60 w-full bg-cover"></div>
 <div className="hero-content text-center text-neutral-content">

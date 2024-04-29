@@ -1,7 +1,7 @@
 const Discount = () => {
   return (
-    <div className="dark:text-white  my-4 md:my-10 lg:my-16">
-      <h1 className="text-center text-4xl my-4 md:my-10 lg:my-16 ">Check Our Discount And Enjoy!!</h1>
+    <div className="  bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-gray-200">
+      <h1 className="text-center text-4xl p-10 ">Check Our Discount And Enjoy!!</h1>
       <hr />
 
       <div className="flex flex-col lg:flex-row justify-center items-center ">
@@ -18,7 +18,7 @@ const Discount = () => {
             <h2 className="card-title text-white font-bold">Flat discount 30% </h2>
             <h1 className="text-white text-2xl font-extrabold">For New User!!</h1>
             <div className="card-actions justify-start">
-              <button className="btn btn-primary">Buy Now</button>
+              <button className="btn btn-primary bg-blue-500">Buy Now</button>
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@ const Discount = () => {
               <h2 className="card-title text-white font-bold">Flat discount 30% </h2>
               <h1 className="text-white text-2xl font-extrabold">Buy more than $5000!!</h1>
               <div className="card-actions justify-start">
-                <button className="btn btn-primary">Buy Now</button>
+                <button className="btn btn-primary bg-blue-500">Buy Now</button>
               </div>
             </div>
           </div>

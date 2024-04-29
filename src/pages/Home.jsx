@@ -1,9 +1,10 @@
 
+import ArtCraftCard from "../components/body/ArtCraftCard";
 import CraftSection from "../components/body/CraftSection";
 import Discount from "../components/body/Discount";
 import LatestProduct from "../components/body/LatestProduct";
 import Slider from "../components/body/Slider";
-import ArtCraftSection from "./ArtCraftSection";
+
 
 
 
@@ -14,7 +15,7 @@ const Home = () => {
         <div>
             <Slider></Slider>
             <CraftSection></CraftSection>
-            <ArtCraftSection></ArtCraftSection>
+            <ArtCraftCard></ArtCraftCard>
             <Discount></Discount>
             <LatestProduct></LatestProduct>
            

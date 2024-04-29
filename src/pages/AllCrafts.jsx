@@ -8,7 +8,7 @@ const carfts = useLoaderData();
 
 
     return (
-        <div className="" >
+        <div className="bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-gray-200" >
 
 <div className='overflow-x-auto'>
         <table className='table-auto w-full border-collapse'>

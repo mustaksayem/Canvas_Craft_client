@@ -11,6 +11,7 @@ import MyCrafts from "../pages/MyCrafts";
 import CraftsDetails from "../pages/CraftsDetails";
 import Update from "../pages/Update";
 import ArtCraftSection from "../pages/ArtCraftSection";
+import CategoryDetails from "../pages/CategoryDetails";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ export const router = createBrowserRouter([
         path: "/artCraft/:subcategory_Name",
         element: <ArtCraftSection></ArtCraftSection>,
       },
+      
       {
         path: "/addcraftitem",
         element: (
@@ -52,6 +54,10 @@ export const router = createBrowserRouter([
       {
         path: "/carftsDetails/:id",
         element: <CraftsDetails />
+      },
+      {
+        path: "/categoryDetails/:id",
+        element: <CategoryDetails />
       },
       {
         path: "/update/:id",
