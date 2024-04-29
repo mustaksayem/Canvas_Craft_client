@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 
 const MyCrafts = () => {
@@ -46,7 +47,7 @@ Swal.fire({
     });
    
       }
-
+      toast.success("Deleted item")
       if(control == false){
         setControl(true)
         

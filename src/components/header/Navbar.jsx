@@ -30,7 +30,7 @@ const Navbar = () => {
 
 
   const navigate = useNavigate();
-  const [sideOpen, setSideOpen] = useState(false);
+ 
   const [userOpen, setUserOpen] = useState(false);
 
   const { user, logOut } = useAuth() || {};
@@ -121,7 +121,7 @@ const Navbar = () => {
 
 
 
-       
+       {/* hbjhbxhxuy */}
         {/* middle */}
         <nav className="header-links md:contents font-medium text-base  hidden ">
           <ul className="flex  items-center ml-4  w-full justify-center dark:text-red">
