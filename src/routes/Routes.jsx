@@ -12,66 +12,59 @@ import CraftsDetails from "../pages/CraftsDetails";
 import Update from "../pages/Update";
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Mainlayout></Mainlayout>,
-      errorElement: <Error></Error>,
-  
-      children: [
-        {
-          path: "/",
-          element:<Home></Home> ,
-         
-        },
-        {
-            path: "/allcrafts",
-            element:<AllCrafts></AllCrafts> ,
-            loader: () => fetch('http://localhost:5000/add')
-           
-          },
-          {
-            path: "/addcraftitem",
-            element:<ProtectedRoute>
-<AddCraftItem></AddCraftItem>
-            </ProtectedRoute>
-             
-           
-          },
-          
-          {
-            path: "/mycrafts",
-            element:<ProtectedRoute>
-            <MyCrafts></MyCrafts>
-            </ProtectedRoute>
-             
-           
-          },
-          {
-            path: "/carftsDetails/:id",
-            element:
-            <CraftsDetails></CraftsDetails>
-           
-          },
-          {
-            path: "/update/:id",
-            element:
-            <ProtectedRoute>
-           <Update></Update>
-            </ProtectedRoute>
-           
-          },
-          
-          {
-            path: "/login",
-            element:<LoginPage></LoginPage> ,
-           
-          },
-          {
-            path: "/registration",
-            element:<RegisterPage></RegisterPage> ,
-           
-          },
-        
-      ],
-    },
-  ]);
+  {
+    path: "/",
+    element: <Mainlayout />,
+    errorElement: <Error />,
+
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/allcrafts",
+        element: <AllCrafts />,
+        loader: () => fetch("http://localhost:5000/add")
+      },
+      {
+        path: "/addcraftitem",
+        element: (
+          <ProtectedRoute>
+            <AddCraftItem />
+          </ProtectedRoute>
+        )
+      },
+
+      {
+        path: "/mycrafts",
+        element: (
+          <ProtectedRoute>
+            <MyCrafts />
+          </ProtectedRoute>
+        )
+      },
+      {
+        path: "/carftsDetails/:id",
+        element: <CraftsDetails />
+      },
+      {
+        path: "/update/:id",
+        element: (
+          <ProtectedRoute>
+            <Update />
+          </ProtectedRoute>
+        )
+      },
+
+      {
+        path: "/login",
+        element: <LoginPage />
+      },
+      {
+        path: "/registration",
+        element: <RegisterPage />
+      }
+    ]
+  }
+]);

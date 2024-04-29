@@ -5,13 +5,13 @@ const Discount = () => {
       <hr />
 
       <div className="flex flex-col lg:flex-row justify-center items-center ">
-        <div className="card w-1/2 bg-base-100  image-full  my-4 md:my-10  justify-center items-center bg-cover mx-10 ">
+        <div className="card  bg-base-100  image-full  my-4 md:my-10  justify-center items-center bg-cover mx-10 ">
           <figure>
             <img
               src="https://i.ibb.co/CMtWwcW/IMG-1512-scaled.jpg
 "
               alt="Shoes"
-              className=""
+              className="w-full"
             />
           </figure>
           <div className="card-body justify-center items-center">
@@ -24,7 +24,7 @@ const Discount = () => {
         </div>
 
        
-          <div className="card w-1/2  bg-base-100  image-full  my-4 md:my-10  justify-center items-center bg-cover mx-10  ">
+          <div className="card  bg-base-100  image-full  my-4 md:my-10  justify-center items-center bg-cover mx-10  ">
             <figure>
               <img
                 src="https://i.ibb.co/GTZJB7q/img2mkckejc.jpg
