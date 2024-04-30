@@ -7,22 +7,8 @@ import toast from "react-hot-toast";
 import ThemeControllerBtn from "../ThemeControllerBtn";
 
 const Navbar = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
-  const handleToggle = e => {
-    if (e.target.checked) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
-  useEffect(
-    () => {
-      localStorage.setItem("theme", theme);
-      const localTheme = localStorage.getItem("theme");
-      document.querySelector("html").setAttribute("data-theme", localTheme);
-    },
-    [theme]
-  );
+  
+ 
 
   const navigate = useNavigate();
 
@@ -38,16 +24,16 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" mx-auto">
-      <header className="shadow-lg  flex w-full   ">
-        <div className="navbar-start w-full">
-          <div className="dropdown">
+    <div className=" mx-auto  bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-gray-200 py-6">
+      <header className="  flex justify-between  ">
+        <div className=" ">
+          <div className="dropdown ">
             <div tabIndex={0} role="button" className="btn btn-ghost sm:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
               </svg>
             </div>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow bg-base-100 rounded-box w-64">
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow bg-base-100 rounded-box ">
               <li>
                 <NavLink
                   to="/"
@@ -106,11 +92,11 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="  text-xl">CanvasCraftHub</a>
         </div>
 
         {/* middle */}
-        <nav className="header-links md:contents font-medium text-base  hidden w-full ">
+        <nav className="header-links md:contents font-medium text-base  hidden  ">
           <ul className="flex  items-center ml-4  w-full justify-center dark:text-red">
             <li>
               <NavLink
@@ -172,7 +158,7 @@ const Navbar = () => {
         </nav>
 
         {/* End */}
-        <div className="relative md:border-l flex items-center justify-end  w-full  ">
+        <div className="  flex items-center justify-end gap-3 ">
          
           <ThemeControllerBtn></ThemeControllerBtn>
 

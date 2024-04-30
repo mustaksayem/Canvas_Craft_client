@@ -67,7 +67,7 @@ const AddCraftItem = () => {
                 <input
                   type="text"
                   name="image"
-                  className="focus:outline-none border-b w-full  border-sky-400 placeholder-gray-500 bg-slate-100 mb-8"
+                  className="focus:outline-none border-b w-full  border-sky-400 placeholder-gray-500 bg-slate-100 dark:bg-slate-400 mb-8"
                   placeholder="Image Url "
                 />
               </div>
@@ -75,7 +75,7 @@ const AddCraftItem = () => {
                 <input
                   type="text"
                   name="item_name"
-                  className="focus:outline-none border-b w-full  border-sky-400 placeholder-gray-500 bg-slate-100 mb-8"
+                  className="focus:outline-none border-b w-full  border-sky-400 placeholder-gray-500 bg-slate-100 dark:bg-slate-400 mb-8"
                   placeholder="Item Name "
                 />
               </div>
@@ -84,7 +84,7 @@ const AddCraftItem = () => {
                 <input
                   type="text"
                   name="price"
-                  className="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 bg-slate-100 mb-8"
+                  className="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 bg-slate-100 dark:bg-slate-400 mb-8"
                   placeholder="Price "
                 />
               </div>
@@ -92,7 +92,7 @@ const AddCraftItem = () => {
                 <input
                   type="text"
                   name="rating"
-                  className="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 bg-slate-100 mb-8"
+                  className="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 bg-slate-100 dark:bg-slate-400 mb-8"
                   placeholder="Rating "
                 />
               </div>
@@ -101,7 +101,7 @@ const AddCraftItem = () => {
                 <input
                   type="text"
                   name="processing_time"
-                  className="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 bg-slate-100 mb-8"
+                  className="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 bg-slate-100 dark:bg-slate-400 mb-8"
                   placeholder="Processing Time"
                 />
               </div>
@@ -137,14 +137,14 @@ const AddCraftItem = () => {
                 <input
                   type="text"
                   name="short_description"
-                  className="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 bg-slate-100 mb-8"
+                  className="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 bg-slate-100 dark:bg-slate-400 mb-8"
                   placeholder="Short Description "
                 />
               </div>
 
               <div className="flex flex-col gap-1 border-b border-sky-400 mb-6">
-                <label className="font-semibold text-gray-500">Subcategory Name</label>
-                <select className="border-[1px] p-2 rounded-md" required name="subcategory_Name">
+                <label className="font-semibold text-gray-500 dark:bg-slate-400">Subcategory Name</label>
+                <select className=" p-2 rounded-md bg-slate-100 dark:bg-slate-400" required name="subcategory_Name">
                   <option value="">Select Subcategory</option>
                   <option value="Landscape Painting">Landscape Painting</option>
                   <option value="Portrait Drawing">Portrait Drawing</option>
