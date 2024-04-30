@@ -32,10 +32,12 @@ const ArtCraftSection = () => {
             <div className="space-y-3 p-2 ">
               <p className=" text-lg font-semibold pl-2">{p.item_name}</p>
               <p className="text-lg   font-semibold pl-2">Sub Category Name : {p.subcategory_Name}</p>
-              <p className="text-lg   font-semibold pl-2">Stock Status : {p.stockStatus}</p>
+              
+             
               <p className="text-lg   font-semibold pl-2 ">Price : {p.price}</p>
               <p className="text-lg   font-semibold pl-2">Rating : {p.rating}</p>
-              <p className="text-lg   font-semibold pl-2">Customization : {p.customization} </p>
+             
+              
               <div className="w-full">
                 <Link to={`/categoryDetails/${p._id}`}>
                   <button className="text-white w-full p-2 bg-green-500 font-bold">
