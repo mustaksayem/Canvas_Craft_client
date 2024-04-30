@@ -8,7 +8,7 @@ const Update = () => {
   const [craft, setCrafts] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/carftsDetails/${id}`)
+    fetch(`https://canvas-crafts-hub-server.vercel.app/carftsDetails/${id}`)
       .then(res => res.json())
       .then((data) => {
         setCrafts(data);
@@ -21,7 +21,7 @@ const Update = () => {
     const formData = new FormData(e.target);
     const info = Object.fromEntries(formData.entries());
 
-    fetch(`http://localhost:5000/update/${id}`, {
+    fetch(`https://canvas-crafts-hub-server.vercel.app/update/${id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info),

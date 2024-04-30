@@ -35,7 +35,7 @@ const AddCraftItem = () => {
     };
     console.log(newCarft);
 
-    fetch("http://localhost:5000/add", {
+    fetch("https://canvas-crafts-hub-server.vercel.app/add", {
       method: "POST",
       headers: {
         "content-type": "application/json"

@@ -177,9 +177,9 @@ const Navbar = () => {
 
               <button
                 onClick={() => navigate("/registration")}
-                className="bg-[#23BE0A] hover:bg-[#23BE0A]  duration-200 text-white font-bold px-4 xl:px-6 py-1 rounded"
+                className="bg-[#23BE0A] hover:bg-[#23BE0A]  duration-200 text-white font-bold px-0 xl:px-6 py-1 rounded"
               >
-                Registration
+                Sinup
               </button>
             </div>
           )}

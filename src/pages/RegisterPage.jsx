@@ -89,7 +89,7 @@ const RegisterPage = () => {
         <div className=" w-1/2 mx-auto ">
           <div className=" shadow-lg ">
             <div className="  flex">
-              <div className=" bg-white rounded-lg lg:rounded-l-none  w-full ">
+              <div className=" bg-gray-300 dark:bg-gray-600 rounded-lg lg:rounded-l-none  w-full ">
                 <div className=" p-5  ">
                   <div className="pb-8 text-center text-2xl">
                     <p className="font-semibold text-black/60">Enter your details below</p>
@@ -99,7 +99,7 @@ const RegisterPage = () => {
                     <div>
                       <fieldset className="border border-solid border-gray-300 p-3  rounded">
                         <legend className=" font-medium text-black/60">Name</legend>
-                        <input type="text" name="name" id="" placeholder="name" className="px-4 py-1  focus:outline-0" />
+                        <input type="text" name="name" id="" placeholder="name" className="bg-gray-300 dark:bg-gray-600 px-4 py-1  focus:outline-0" />
                       </fieldset>
                     </div>
 
@@ -111,7 +111,7 @@ const RegisterPage = () => {
                           name="email"
                           id=""
                           placeholder="Email"
-                          className="px-4 py-1 w-full focus:outline-0"
+                          className="bg-gray-300 dark:bg-gray-600 px-4 py-1 w-full focus:outline-0"
                         />
                       </fieldset>
                     </div>
@@ -123,7 +123,7 @@ const RegisterPage = () => {
                           name="password"
                           id=""
                           placeholder="password"
-                          className="px-4 py-1 focus:outline-0"
+                          className="bg-gray-300 dark:bg-gray-600 px-4 py-1 focus:outline-0"
                         />
                       </fieldset>
                     </div>
@@ -136,13 +136,13 @@ const RegisterPage = () => {
                           name="imageURL"
                           id=""
                           placeholder="imageURL"
-                          className="px-4 py-1 w-full focus:outline-0"
+                          className="bg-gray-300 dark:bg-gray-600 px-4 py-1 w-full focus:outline-0"
                         />
                       </fieldset>
                     </div>
 
                     <div className="flex  justify-center">
-                      <button className="px-3 py-2 bg-[#FF497C] hover:bg-[#ab3154] rounded text-white font-semibold">
+                      <button className="px-3 py-2 bg-[#23BE0A] hover:bg-[#23BE0A] rounded text-white font-semibold">
                         Sign Up
                       </button>
                     </div>
@@ -199,7 +199,7 @@ const RegisterPage = () => {
                     <div className="flex justify-center text-gray-800 items-center">
                       Already a member?
                       <Link
-                        className="px-3 ml-3 py-2 bg-[#FF497C] hover:bg-[#ab3154] rounded text-white font-semibold"
+                        className="px-3 ml-3 py-2 bg-[#23BE0A] hover:bg-[#23BE0A] rounded text-white font-semibold"
                         to="/login"
                       >
                         Sign In

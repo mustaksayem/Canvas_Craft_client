@@ -11,7 +11,7 @@ const Error = () => {
       <div>
         
 
-        <section className='flex items-center  p-16  text-gray-800'>
+        <section className='flex items-center  p-16  bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-gray-200'>
           <div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
             <div className='max-w-md text-center'>
               <h2 className='mb-8 font-extrabold text-9xl text-gray-400'>

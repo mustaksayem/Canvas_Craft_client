@@ -22,7 +22,7 @@ const Slider = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className='mySwiper relative'>
-          <div className="z-50 absolute top-10 text-black left-1/2 transform -translate-x-1/2">
+          <div className="z-50 absolute top-10 text-slate-900 left-1/2 transform -translate-x-1/2">
             <p className="font-bold text-4xl mb-5">
               Dive into a World of Color and Expression </p>
        <p className="font-bold text-4xl mb-5">       <Typewriter 

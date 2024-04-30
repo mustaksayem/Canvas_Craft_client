@@ -7,7 +7,7 @@ const CategoryDetails = () => {
     console.log(id);
     const [craft,setCrafts] =useState({});
     useEffect(() => {
-     fetch(`http://localhost:5000/categoryDetails/${id}`)
+     fetch(`https://canvas-crafts-hub-server.vercel.app/categoryDetails/${id}`)
          .then(res => res.json())
          .then((data) => {
           setCrafts(data);

@@ -7,7 +7,7 @@ const CraftSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/add");
+        const response = await fetch("https://canvas-crafts-hub-server.vercel.app/add");
         const data = await response.json();
         const slicedCrafts = data.slice(0, 6);
         console.log(slicedCrafts);

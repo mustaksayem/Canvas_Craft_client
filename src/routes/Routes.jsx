@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
       {
         path: "/allcrafts",
         element: <AllCrafts />,
-        loader: () => fetch("http://localhost:5000/add")
+        loader: () => fetch("https://canvas-crafts-hub-server.vercel.app/add")
       },
       {
         path: "/artCraft/:subcategory_Name",

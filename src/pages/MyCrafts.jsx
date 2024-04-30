@@ -12,7 +12,7 @@ const MyCrafts = () => {
   console.log(user);
   useEffect(
     () => {
-      fetch(`http://localhost:5000/myCrafts/${user?.email}`)
+      fetch(`https://canvas-crafts-hub-server.vercel.app/myCrafts/${user?.email}`)
         .then(res => res.json())
         .then(data => {
           setItem(data);
@@ -32,7 +32,7 @@ const MyCrafts = () => {
       confirmButtonText: "Yes, delete it!"
     }).then(result => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/myCrafts/${_id}`, {
+        fetch(`https://canvas-crafts-hub-server.vercel.app/myCrafts/${_id}`, {
           method: "DELETE"
         })
           .then(res => res.json())

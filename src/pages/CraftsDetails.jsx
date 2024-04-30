@@ -7,7 +7,7 @@ const CraftsDetails = () => {
   const [craft, setCrafts] = useState({});
   useEffect(
     () => {
-      fetch(`http://localhost:5000/carftsDetails/${id}`)
+      fetch(`https://canvas-crafts-hub-server.vercel.app/carftsDetails/${id}`)
         .then(res => res.json())
         .then(data => {
           setCrafts(data);
