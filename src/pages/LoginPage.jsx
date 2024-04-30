@@ -59,16 +59,16 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="gadgetContainer ">
+    <div className="gadgetContainer bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-gray-200 ">
       {loading && <Spinner />}
 
-      <div className=" border shadow-lg mt-10">
-        <div className="w-full  flex justify-center items-center border">
-          <div className=" border border-red-300 ">
-            <div className=" w-full  bg-white p-5 rounded-lg lg:rounded-l-none">
+      <div className="  shadow-2xl">
+        <div className="w-full  flex justify-center items-center ">
+          <div className="  ">
+            <div className=" w-full  bg-gray-300 dark:bg-gray-600 p-5 rounded-lg lg:rounded-l-none">
               <div className=" p-5 ">
                 <div className="pb-8">
-                  <p className="text-3xl font-bold mb-2 text-gray-500">Sign in with your organizational id number.</p>
+                  <p className="text-3xl font-bold mb-2 ">Sign in with your organizational id number.</p>
                 </div>
 
                
@@ -76,19 +76,19 @@ const LoginPage = () => {
                 <form onSubmit={handleLogin} className="space-y-3 w-full ">
                   <div>
                     <fieldset className="border border-solid border-gray-300 p-3 w-full rounded">
-                      <legend className=" font-medium text-black/60">Email</legend>
-                      <input type="email" name="email" id="" placeholder="Email" className="px-4 py-1 w-full focus:outline-0" />
+                      <legend className=" font-medium">Email</legend>
+                      <input type="email" name="email" id="" placeholder="Email" className="bg-gray-300 dark:bg-gray-600 px-4 py-1 w-full focus:outline-0" />
                     </fieldset>
                   </div>
                   <div>
                     <fieldset className="border border-solid border-gray-300 p-3 w-full rounded">
-                      <legend className=" font-medium text-black/60">Password</legend>
+                      <legend className=" font-medium ">Password</legend>
                       <input
                         type="password"
                         name="password"
                         id=""
-                        placeholder="password"
-                        className="px-4 py-1 w-full focus:outline-0"
+                        placeholder="Password"
+                        className="bg-gray-300 dark:bg-gray-600 px-4 py-1 w-full focus:outline-0"
                       />
                     </fieldset>
                   </div>
@@ -159,7 +159,7 @@ const LoginPage = () => {
 
 
                 <div className="my-5 border-b text-center">
-                  <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium  transform translate-y-3/4">
+                  <div className="leading-none px-2 inline-block text-sm  tracking-wide font-medium  transform translate-y-3/4">
                     Or sign In with e-mail
                   </div>
                 </div>

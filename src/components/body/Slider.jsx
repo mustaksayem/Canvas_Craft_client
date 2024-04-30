@@ -4,6 +4,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Typewriter } from "react-simple-typewriter";
 
 const Slider = () => {
   return (
@@ -22,8 +23,18 @@ const Slider = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className='mySwiper relative'>
           <div className="z-50 absolute top-10 text-black left-1/2 transform -translate-x-1/2">
-            <p className="font-bold text-4xl mb-5">Dive into a World of Color and Expression: Where Every Stroke Tells a Story. Unleash Your Creativity and Explore the Boundless Possibilities of Painting and Drawing.</p>
+            <p className="font-bold text-4xl mb-5">
+              Dive into a World of Color and Expression </p>
+       <p className="font-bold text-4xl mb-5">       <Typewriter 
+            words={['Welcome to our Gallery', 'Where Art Comes Alive!']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
             
+          /></p>
           </div>
         <SwiperSlide>
           <img

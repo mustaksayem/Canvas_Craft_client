@@ -41,9 +41,9 @@ const CraftSection = () => {
                 <p className="text-lg   font-semibold pl-2">
                   <span className="text-lg   font-semibold">Customization : {craft.customization}</span>
                 </p>
-                <div>
+                <div className="w-full">
                   <Link to={`/carftsDetails/${craft._id}`}>
-                    <p className="text-white btn btn-primary bg-green-500 dark:bg-blue-950 font-bold  flex justify-center items-center">View Details</p>
+                    <button className="text-white w-full p-3  bg-green-500 dark:bg-blue-950 font-bold  flex justify-center items-center">View Details</button>
                   </Link>
                 </div>
               </div>

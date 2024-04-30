@@ -85,22 +85,12 @@ const RegisterPage = () => {
     <div>
       {loading && <Spinner />}
 
-      <div className=" ">
-        <div className="flex md:justify-between items-center justify-center  gap-4">
-          {/* <img className="h-[100px]" src={logo} alt="" /> */}
-          <div>
-            Already a member?
-            <Link className="px-3 ml-3 py-2 bg-[#FF497C] hover:bg-[#ab3154] rounded text-white font-semibold" to="/signIn">
-              Sign In
-            </Link>
-          </div>
-        </div>
-
-        <div className="flex justify-center items-center w-full border border-red-700">
-          <div className="border shadow-lg mt-10">
+      <div className="bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-gray-200 ">
+        <div className=" w-1/2 mx-auto ">
+          <div className=" shadow-lg ">
             <div className="  flex">
-              <div className=" bg-white p-2 rounded-lg lg:rounded-l-none">
-                <div className=" p-5 ">
+              <div className=" bg-white rounded-lg lg:rounded-l-none  w-full ">
+                <div className=" p-5  ">
                   <div className="pb-8 text-center text-2xl">
                     <p className="font-semibold text-black/60">Enter your details below</p>
                   </div>
@@ -158,14 +148,14 @@ const RegisterPage = () => {
                     </div>
                   </form>
                   <div className="my-5  text-center">
-                    <div className=" px-2 inline-block text-sm text-gray-600 tracking-wide font-medium ">
-                      Or sign In with e-mail
+                    <div className=" px-2 inline-block text-sm text-gray-800 tracking-wide font-medium ">
+                      Or Sign In with Social Account
                     </div>
                   </div>
-                  <div className="flex items-center mb-4">
+                  <div className=" flex gap-4  mb-4">
                     <button
                       onClick={() => handleGoogleSignIn()}
-                      className="w-full  font-bold shadow-sm rounded-lg  bg-indigo-100 text-gray-800 flex items-center justify-center "
+                      className="w-full  font-bold shadow-sm rounded-lg p-4  bg-indigo-100 text-gray-800 flex items-center justify-center "
                     >
                       <div className="bg-white  rounded-full">
                         <svg className="w-4" viewBox="0 0 533.5 544.3">
@@ -187,12 +177,12 @@ const RegisterPage = () => {
                           />
                         </svg>
                       </div>
-                      <span className="ml-1">Sign In with Google</span>
+                      <span className="">Sign In with Google</span>
                     </button>
 
                     <button
                       onClick={() => handleGithubSignIn()}
-                      className="w-full  font-bold shadow-sm rounded-lg  bg-indigo-100 text-gray-800 flex items-center justify-center"
+                      className="w-full  font-bold shadow-sm rounded-lg p-4  bg-indigo-100 text-gray-800 flex items-center justify-center"
                     >
                       <div className="bg-white p-1 rounded-full">
                         <svg className="w-4" viewBox="0 0 32 32">
@@ -205,6 +195,17 @@ const RegisterPage = () => {
                       <span className="">Sign In with GitHub</span>
                     </button>
                   </div>
+                 
+                    <div className="flex justify-center text-gray-800 items-center">
+                      Already a member?
+                      <Link
+                        className="px-3 ml-3 py-2 bg-[#FF497C] hover:bg-[#ab3154] rounded text-white font-semibold"
+                        to="/login"
+                      >
+                        Sign In
+                      </Link>
+                    </div>
+                  
                 </div>
               </div>
             </div>
