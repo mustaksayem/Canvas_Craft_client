@@ -53,7 +53,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "/carftsDetails/:id",
-        element: <CraftsDetails />
+        element: <ProtectedRoute>
+        <CraftsDetails />
+        </ProtectedRoute>
       },
       {
         path: "/categoryDetails/:id",
